@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # React Weather Dashboard
 
 A modern weather dashboard built with React.js, demonstrating best practices in component architecture, state management, and API integration. Features real-time weather updates, city search, geolocation, error handling, and persistent state.
@@ -77,4 +75,3 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_K
   .catch(error => console.error('Error fetching weather data:', error));
 ```
 
->>>>>>> b91f2441872f4f989b06581365dd364b93d5258a
