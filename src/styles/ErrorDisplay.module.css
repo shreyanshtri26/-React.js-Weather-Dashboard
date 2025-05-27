@@ -1,0 +1,27 @@
+.error {
+  color: #ff5252;
+  background: linear-gradient(90deg, #2d1a1a 60%, #c62828 100%);
+  border: 1.5px solid #c62828;
+  border-radius: 9px;
+  padding: 0.9em 1.2em;
+  margin: 1.2em 0;
+  font-weight: 700;
+  box-shadow: 0 2px 14px #c6282833;
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  animation: shake 0.3s;
+}
+.error::before {
+  content: "⚠️";
+  font-size: 1.3em;
+  margin-right: 0.5em;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}

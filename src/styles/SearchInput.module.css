@@ -1,0 +1,112 @@
+/*
+  Search Input Form Styles (2025 rewrite)
+  --------------------------------------
+  - Modern glassmorphism
+  - Single-line, equal-width layout
+  - Responsive, accessible, and visually appealing
+*/
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2em;
+  padding: 0.8em 1.2em;
+  background: rgba(40, 50, 65, 0.22);
+  border-radius: 18px;
+  border: 1.5px solid rgba(80, 120, 180, 0.13);
+  box-shadow: 0 6px 32px rgba(80, 120, 180, 0.14);
+  backdrop-filter: blur(10px) saturate(120%);
+  transition: box-shadow 0.23s, border 0.23s;
+  position: relative;
+}
+.searchForm:hover,
+.searchForm:focus-within {
+  box-shadow: 0 10px 40px #4fc3f7aa;
+  border: 2.5px solid #4fc3f7;
+}
+
+/* Equal width for all children */
+.searchInput, .searchBtn, .geoBtn {
+  flex: 1 1 0%;
+  min-width: 0;
+  max-width: 210px;
+  margin: 0;
+}
+
+/* Input Styles */
+.searchInput {
+  padding: 0.85em 1.1em;
+  border-radius: 10px;
+  border: 1.5px solid #3a3a3a;
+  background: rgba(41, 44, 47, 0.97);
+  color: #f4f7fa;
+  font-size: 1.1rem;
+  outline: none;
+  box-shadow: 0 1px 8px rgba(60,60,60,0.12);
+  transition: border 0.18s, box-shadow 0.18s;
+}
+.searchInput:focus {
+  border: 2px solid #4fc3f7;
+  box-shadow: 0 2px 12px #4fc3f7aa;
+}
+
+/* Button Base Styles */
+.searchBtn, .geoBtn {
+  padding: 0.85em 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #232526;
+  cursor: pointer;
+  box-shadow: 0 1px 8px rgba(60,60,60,0.11);
+  transition: background 0.18s, box-shadow 0.18s, opacity 0.18s;
+  outline: none;
+}
+
+/* Primary Button (Search) */
+.searchBtn {
+  background: linear-gradient(90deg, #4fc3f7 60%, #1976d2 100%);
+}
+.searchBtn:hover,
+.searchBtn:focus-visible {
+  background: linear-gradient(90deg, #039be5 60%, #1976d2 100%);
+  box-shadow: 0 2px 16px #039be566;
+}
+
+/* Secondary Button (Geo) */
+.geoBtn {
+  background: linear-gradient(90deg, #ffb74d 60%, #ffa726 100%);
+}
+.geoBtn:hover,
+.geoBtn:focus-visible {
+  background: linear-gradient(90deg, #ffa726 60%, #ff9800 100%);
+  box-shadow: 0 2px 16px #ffa72666;
+}
+
+/* Disabled State */
+.searchBtn:disabled,
+.geoBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Responsive: stack vertically on mobile */
+@media (max-width: 600px) {
+  .searchForm {
+    flex-direction: column;
+    gap: 0.8em;
+    align-items: stretch;
+    max-width: 98vw;
+    padding: 0.7em 0.3em;
+  }
+  .searchInput, .searchBtn, .geoBtn {
+    max-width: 100%;
+    width: 100%;
+  }
+}

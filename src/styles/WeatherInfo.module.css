@@ -1,0 +1,49 @@
+.weatherInfo {
+  background: rgba(34, 34, 34, 0.75);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+  padding: 2.5rem 3rem 2rem 3rem;
+  margin: 2em 0;
+  min-width: 320px;
+  max-width: 96vw;
+  text-align: center;
+  backdrop-filter: blur(8px) saturate(120%);
+  border: 1.5px solid rgba(255,255,255,0.08);
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.weatherInfo:hover {
+  box-shadow: 0 12px 40px #4fc3f7aa;
+  border: 2.5px solid #4fc3f7;
+}
+.weatherInfo h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.7em;
+  letter-spacing: 1px;
+}
+.weatherIcon {
+  background: #222;
+  border-radius: 50%;
+  box-shadow: 0 0 32px #4fc3f7bb;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0.7em;
+  border: 2px solid #4fc3f7;
+}
+.weatherInfo p {
+  margin: 0.7em 0;
+  font-size: 1.15rem;
+  letter-spacing: 0.2px;
+}
+@media (max-width: 600px) {
+  .weatherInfo {
+    padding: 1.2rem 0.6rem 1.2rem 0.6rem;
+    min-width: 0;
+  }
+  .weatherInfo h2 {
+    font-size: 1.4rem;
+  }
+  .weatherIcon {
+    width: 70px;
+    height: 70px;
+  }
+}

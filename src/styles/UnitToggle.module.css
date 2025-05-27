@@ -1,0 +1,29 @@
+/* UnitToggle.module.css */
+.toggleWrap {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  margin-bottom: 1.2em;
+}
+.toggleWrap button {
+  flex: 1 1 0%;
+  padding: 0.5em 1.1em;
+  border-radius: 8px;
+  border: 1.5px solid #4fc3f7;
+  background: rgba(44, 62, 80, 0.18);
+  color: #4fc3f7;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+}
+.toggleWrap button.active,
+.toggleWrap button[aria-pressed="true"] {
+  background: linear-gradient(90deg, #4fc3f7 60%, #1976d2 100%);
+  color: #232526;
+  border: 2px solid #1976d2;
+}
+.toggleWrap button:hover:not(.active) {
+  background: #232526;
+  color: #fff;
+}
