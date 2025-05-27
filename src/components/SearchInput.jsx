@@ -38,7 +38,7 @@ export default function SearchInput() {
         setGeoLoading(false);
       },
       (err) => {
-        alert('Geolocation: ');
+        alert('Location loading......') ;
         setGeoLoading(false);
       }
     );
